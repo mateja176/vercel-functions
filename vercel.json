@@ -9,5 +9,11 @@
   "git": {
     "deploymentEnabled": false
   },
-  "outputDirectory": "api"
+  "outputDirectory": "api",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    }
+  ]
 }
