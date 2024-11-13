@@ -4,6 +4,9 @@
   "main": "index.js",
   "scripts": {
     "build": "rolldown -c",
+    "predeploy": "vercel build --prod --token=$VERCEL_TOKEN",
+    "deploy": "vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN",
+    "pull": "vercel pull --yes --environment=production --token=$VERCEL_TOKEN",
     "start": "vercel dev"
   },
   "keywords": [],

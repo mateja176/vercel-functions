@@ -7,7 +7,7 @@ import { defineConfig } from 'rolldown';
  */
 export default defineConfig({
   external: /^node:.*/,
-  input: ['src/hello.ts'],
+  input: ['src/index.ts'],
   output: {
     format: 'es',
     dir: 'api',
