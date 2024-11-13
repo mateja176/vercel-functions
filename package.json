@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --outdir=api --packages=external --platform=neutral",
+    "build": "bun build.ts",
     "predeploy": "vercel build --prod --token=$VERCEL_TOKEN",
     "deploy": "vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN",
     "pull": "vercel pull --yes --environment=production --token=$VERCEL_TOKEN",
