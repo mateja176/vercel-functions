@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "rolldown -c",
+    "build": "esbuild src/index.ts --bundle --outdir=api --packages=external --platform=neutral",
     "predeploy": "vercel build --prod --token=$VERCEL_TOKEN",
     "deploy": "vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN",
     "pull": "vercel pull --yes --environment=production --token=$VERCEL_TOKEN",
@@ -14,8 +14,10 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "rolldown": "^0.14.0",
     "vercel": "^38.0.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "esbuild": "^0.24.0"
+  }
 }
