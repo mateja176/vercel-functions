@@ -1,6 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "bun run build",
   "functions": {
     "api/**/*.js": {
       "maxDuration": 60
@@ -9,7 +8,6 @@
   "git": {
     "deploymentEnabled": false
   },
-  "outputDirectory": "api",
   "rewrites": [
     {
       "source": "/api/(.*)",
